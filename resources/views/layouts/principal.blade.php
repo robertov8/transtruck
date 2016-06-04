@@ -59,6 +59,7 @@
                             <li><a href="#">Opções</a></li>
                             <li><a href="#">Perfil</a></li>
                             <li><a href="#">Ajuda</a></li>
+                            <li><a href="{{ url('/logout') }}">Sair</a></li>
                         @endif
                     </ul>
                 </div>
