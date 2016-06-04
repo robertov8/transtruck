@@ -33,13 +33,3 @@ PUT    /usuario/{id}      - usuario.update   - Atualiza usuario
 DELETE /usuario/{id}      - usuario.destroy  - Apagar
 */
 Route::resource('usuario', 'UsuarioController');
-
-
-/*
-// Usuario index
-Route::get('/usuario' 'UsuarioController@index');
-// Usuario create
-Route::post('/usuario', 'UsuarioController@create');
-// Usuario update
-Route::put('/usuario/{id}', 'UsuarioController@update')
-*/
