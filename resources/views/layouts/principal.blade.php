@@ -49,18 +49,26 @@
             <nav>
                 <div class="nav-wrapper">
                     <a href="{{ URL::route('usuario.index') }}" class="brand-logo">TransTruck</a>
+                    <a href="#" data-activates="mobile-navbar" class="button-collapse"><i class="material-icons">menu</i></a>
 
                     <ul id="nav-mobile" class="right hide-on-med-and-down">
-                        @if(Auth::guest())
-                            <li><a href="collapsible.html">Entrar</a></li>
-                            <li><a href="collapsible.html">Registrar</a></li>
-                        @else
+                            {{-- <li><a href="collapsible.html">Entrar</a></li>
+                            <li><a href="collapsible.html">Registrar</a></li> --}}
+                        <li><a href="{{ URL::route('usuario.index') }}">Inicio</a></li>
+                        <li><a href="#">Opções</a></li>
+                        <li><a href="#">Perfil</a></li>
+                        <li><a href="#">Ajuda</a></li>
+                        <li><a href="{{ url('/logout') }}">Sair</a></li>
+                    </ul>
+
+                    <ul id="mobile-navbar" class="side-nav">
+                            {{-- <li><a href="collapsible.html">Entrar</a></li>
+                            <li><a href="collapsible.html">Registrar</a></li> --}}
                             <li><a href="{{ URL::route('usuario.index') }}">Inicio</a></li>
                             <li><a href="#">Opções</a></li>
                             <li><a href="#">Perfil</a></li>
                             <li><a href="#">Ajuda</a></li>
                             <li><a href="{{ url('/logout') }}">Sair</a></li>
-                        @endif
                     </ul>
                 </div>
             </nav>
@@ -170,7 +178,9 @@
 
 
         <script>
-
+            $( document ).ready(function(){
+                $(".button-collapse").sideNav();
+            });
         </script>
     </body>
 </html>
